@@ -1,0 +1,38 @@
+Selenium - 2004 - Jason Huggins - v1
+WebDriver - 2007 - Siemon Steward
+
+Selenium WebDriver - 2009 - v3 - W3C Standard Recommended
+
+What Selenium WebDriver can do?
+- Can automate only web based applications
+- It can talk to browsers - chrome, firefox, edge, IE, Safari, Opera
+- It can run against different OS - Windows, linux, Mac, Android, iOS
+- We can write the script in any language - Java, JavaScript, Python, Ruby, Pearl, C#
+
+Manual Testing:
+We do repetitive Actions
+Time consuming
+Complex to perform
+
+What we can't do?
+- Can it automate excel sheet? No!! (Java Library - Apache POI)
+- Can it automate mainframe applications? No!! (Java Library - WinAppDriver)
+- Can it talk to database? No!! (Java Library - JDBC)
+- Can it automate mobile apps? No!! (Appium)
+- Can it do performance testing? No!! (JMeter/ Load Runner/ Gatling/ Locust - Python)
+- Can it do API testing? No!! (Selenium v4.0 - CDT - Partially)
+
+Automation Tools:
+UFT - MicroFocus - Licensed
+Selenium WebDriver- OpenSource - Free
+Puppeteer - Google - Chrome/ Js
+Cypress - Chrome/ Firefox/ Js
+Playwright
+WebDriver.io
+
+
+Locators (8):
+1. id (1st priority) - avoid id in case of Changing numbers
+2. name (2nd priority) - No duplicates
+3. linktext - if tag name is <a> - link (anchor) - 3rd priority
+4. className - (4th priority) - When there are space inbetween the class attribute value
