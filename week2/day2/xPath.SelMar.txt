@@ -1,0 +1,127 @@
+xPath: XML Path
+
+1. Absolute xPath - We should travserse from the root element of the xml structure
+    - fastest
+/tagName - Mandatory
+/html/body/div[2]/div[2]/div/form/p/input
+
+
+Java - Index starts with 0
+xPath - Index starts with 1
+
+2. Relative xPath - directly get into the particular tag
+    - slower
+
+//tagName - Mandatory
+//input
+
+
+Basic xPath: (5)
+1. Attribute based xPath:
+//tagName[@attributeName='attributeValue']
+
+//input[@id='password']
+//input[@type='password']
+//input[@class='inputLogin']
+
+Multiple Attribute:
+//tagName[@attributeName1='attributeValue1'][@attributeName2='attributeValue2']
+
+//input[@id='password'][@type='password']
+//input[@type='password'][@class='inputLogin']
+
+//input[@type='password' and @class='inputLogin']
+//input[@type='password' or @class='inputLogin']
+
+2. Text based xPath:
+//tagName[text()='textValue']
+//label[text()='Password']
+
+//label[text()='Password'][@for='password']
+
+3. Partial Attribute xPath:
+//tagName[contains(@attributeName,'attributeValue')]
+//input[contains(@class,'Login')]
+
+//input[contains(@class,'Login')][@type='password']
+
+4. Partial Text base xPath:
+//tagName[contains(text(),'textValue')]
+//label[contains(text(),'Pass')]
+
+5. Collection based/ index based xPath: (avoid using when the index is more than 5)
+(//tagName)[index]
+(//input[@class='inputLogin'])[2]
+
+
+Axes/ Advanced xPath: (8)
+
+1. Parent to Child:
+basic xPath for Parent/childTagName
+
+//p[@class='top']/input
+//p[@class='top']/input[@id='username']
+
+2. Child to Parent:
+basic xPath for Child/parent::parentTagName
+//input[@id='username']/parent::p
+//input[@id='username']/parent::p[@class='top']
+
+
+3. Grandparent to grandchild:
+basic xPath for GrandParent//childTagName
+
+//form[@id='login']//input
+//form[@id='login']//input[@id='username']
+
+4. Grandchild to grandparent:
+basic xPath for GrandChild/ancestor::grandParentTagName
+
+//input[@id='username']/ancestor::form
+//input[@id='username']/ancestor::form[@id='login']
+
+
+5. Elder Sibling to Younger Sibling:
+basic xPath for Elder sibling/following-sibling::youngerSiblingTagName
+
+//label[text()='Username']/following-sibling::input
+//label[text()='Username']/following-sibling::input[@id='username']
+
+
+6. Younger to Elder Sibling:
+basic xPath for Younger Sibling/preceding-sibling::elderSiblingTagName
+
+//input[@id='username']/preceding-sibling::label
+//input[@id='username']/preceding-sibling::label[@for='username']
+
+7. Elder Cousin to Younger Cousin:
+basic xPath for Elder Cousin/following::YounerCousinTagName
+
+//label[@for='username']/following::input
+//label[@for='username']/following::input[@id='password']
+
+8. Younger Cousin to Elder Cousin:
+basic xPath for Younger Cousin/preceding::ElderCousinTagName
+
+//label[@for='password']/preceding::input
+//label[@for='password']/preceding::input[@id='username']
+
+tagname as svg
+//*[@id='value']
+
+
+Salesforce:
+
+//input[@placeholder='First Name']
+//span[text()='First Name']/parent::label/following-sibling::input
+//input[@class="firstName compoundBorderBottom form-element__row input"]
+//input[contains(@class,'firstName')]
+
+Myntra:
+
+//label[text()='Flying Machine']/div
+//input[@value='Flying Machine']/following-sibling::div
+
+Leaftaps:
+
+//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a
