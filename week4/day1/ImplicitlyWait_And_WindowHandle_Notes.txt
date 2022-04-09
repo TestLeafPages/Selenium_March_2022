@@ -1,0 +1,20 @@
+Implicitly Wait:
+----------------
+- Selenium Wait, commonly applied for all the findElement & findElements
+- Best practise is to apply at the begining of the automation script
+- Industry standard time limit is 30 secs
+- It will wait for the maximum limit when the element is not available
+- It will interact with element immediately when the element is available within the time limit
+- Polling time for implicitly wait is 500 milli seconds
+
+How to handle multiple window:
+-------------------------------
+- How to switch the control from one window to another window
+
+1. How to get the references of the windows
+	- getWindowHandle() -> To get the reference of current window
+	- getWindowHandles() -> To get the references of all the windows opened by WebDriver 
+2. How to switch the control
+	- apply driver.getWindowHandles() and save all the references in a Set
+	- Copy the set values into List
+	- apply driver.switchTo().window(window handle)
