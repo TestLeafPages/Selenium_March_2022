@@ -1,0 +1,80 @@
+Cucumber - BDD automation tool
+
+TDD - Test Driven Development
+------------------------------
+- Write the testcases first
+- Get the approval for the testcases
+- Development should be based on the testcases
+
+Cons:
+- Lot of negative testcases covered rather than positive testcases
+
+ATTD - Acceptance Test Driven Development:
+------------------------------------------
+- Write the acceptance testcases first
+- Develop the software based on the acceptance testcases
+
+Cons:
+ - Communication gap between the Technical and non technical team
+ 
+ 
+BDD - Behaviour Driven Development:
+-----------------------------------
+- To address the communication gap between tech and non tech team
+
+- Write acceptance testcases first using common language
+	- common language: understandable by both and tech and non tech team
+
+Gherkin Keywords:	
+------------------
+Feature ->	Used to describe the functionality of an application
+Scenario -> Used to describe a testcase
+Given -> Used to represent a pre condition
+When -> Used to represent Test Condition / Step
+Then -> Used to represent expected result (for positive scenario)
+But -> Used to represent expected result (for negative scenario)
+
+
+3 Layers:
+----------
+Features -> Used to write the BDD Testcases
+StepDefinition -> Used to implement the test step using 	
+				  Java/Selenium
+Runner -> TestNG for execution
+
+How to pass data from steps / parameterization:
+-----------------------------------------------
+- enclose the data within '' in the steps
+- replace the data with {string} in the StepDefinition
+- Create arguments in the method to get the input
+- Replace the hard coded data with variable
+
+How to pass multiple data set to a Scenario:
+---------------------------------------------
+- Use Gherkin keyword "Scenario Outline"
+- Examples should follow Scenario Outline
+- First row after Examples is the column hearder
+- All the informations should be enclosed within ||
+- Second row onwards mention data within ||
+- Replace the data with <column name> in the steps				  
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
